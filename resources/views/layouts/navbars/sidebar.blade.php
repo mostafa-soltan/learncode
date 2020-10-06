@@ -136,7 +136,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="/admin/courses">
                         <i class="ni ni-planet text-blue"></i> {{ __('Courses') }}
                     </a>
                 </li>
