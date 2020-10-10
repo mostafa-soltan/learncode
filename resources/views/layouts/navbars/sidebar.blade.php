@@ -146,12 +146,12 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="/admin/quizzes">
                         <i class="ni ni-pin-3 text-orange"></i> {{ __('Quizzes') }}
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="/admin/questions">
                         <i class="ni ni-pin-3 text-orange"></i> {{ __('Questions') }}
                     </a>
                 </li>
