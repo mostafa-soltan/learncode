@@ -54,7 +54,9 @@
                             <tbody>
                             @foreach ($tracks as $track)
                                 <tr>
-                                    <td>{{ $track->name }}</td>
+                                    <td>
+                                        <a href="/admin/tracks/{{ $track->id }}">{{ $track->name }}</a>
+                                    </td>
                                     <td>{{ count($track->courses) }} Courses</td>
                                     <td>{{ $track->created_at->diffForHumans() }}</td>
                                     <td class="text-right">

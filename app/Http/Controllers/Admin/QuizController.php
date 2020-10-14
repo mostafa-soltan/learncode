@@ -34,9 +34,9 @@ class QuizController extends Controller
         }
     }
 
-    public function show($id)
+    public function show(Quiz $quiz)
     {
-        //
+        return view('admin.quizzes.show', compact('quiz'));
     }
 
     public function edit(Quiz $quiz)

@@ -36,9 +36,9 @@ class VideoController extends Controller
         }
     }
 
-    public function show($id)
+    public function show(Video $video)
     {
-        //
+        return view('admin.videos.show', compact('video'));
     }
 
     public function edit(Video $video)
