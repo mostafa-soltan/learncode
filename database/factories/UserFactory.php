@@ -46,7 +46,7 @@ $factory->define(Course::class, function (Faker $faker) {
     $trackid = Track::all()->random()->id;
 
     return [
-        'title' => $faker->paragraph,
+        'title' => $faker->sentence,
         'status' => $faker->randomElement([0, 1]),
         'link' => $faker->url,
         'track_id' => $trackid,
@@ -70,7 +70,7 @@ $factory->define(Question::class, function (Faker $faker) {
     $rightAnswer = $faker->randomElement(explode(' ', $answers));
 
     return [
-        'title' => $faker->paragraph,
+        'title' => $faker->sentence,
         'answers' => $answers,
         'right_answer' => $rightAnswer,
         'score' => $faker->randomElement([1, 5, 10, 15, 20]),
@@ -83,7 +83,7 @@ $factory->define(Video::class, function (Faker $faker) {
     $courseid = Course::all()->random()->id;
 
     return [
-        'title' => $faker->paragraph,
+        'title' => $faker->sentence,
         'link' => $faker->url,
         'course_id' => $courseid,
     ];

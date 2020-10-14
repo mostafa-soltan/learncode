@@ -61,12 +61,12 @@
                                 <div class="form-group{{ $errors->has('score') ? ' has-danger' : '' }}">
                                     <label class="form-control-label" for="input-score">{{ __('Question Score') }}</label>
                                     <select name="score" required class="form-control">
-                                        <option value="5">5</option>
-                                        <option value="10">10</option>
-                                        <option value="15">15</option>
-                                        <option value="20">20</option>
-                                        <option value="25">25</option>
-                                        <option value="30">30</option>
+                                            <option value="5">5</option>
+                                            <option value="10">10</option>
+                                            <option value="15">15</option>
+                                            <option value="20">20</option>
+                                            <option value="25">25</option>
+                                            <option value="30">30</option>
                                     </select>
 
                                     @if ($errors->has('score'))
@@ -79,7 +79,9 @@
                                 <div class="form-group{{ $errors->has('quiz_id') ? ' has-danger' : '' }}">
                                     <label class="form-control-label" for="input-course_id">{{ __('Quiz Name') }}</label>
                                     <select name="quiz_id" required class="form-control">
+                                        @foreach(\App\Quiz::orderBy('id', 'desc')->get() as $quiz)
                                             <option value="{{ $quiz->id }}">{{ $quiz->name }}</option>
+                                        @endforeach
                                     </select>
 
                                     @if ($errors->has('quiz_id'))

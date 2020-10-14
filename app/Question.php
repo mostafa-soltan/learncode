@@ -10,7 +10,8 @@ class Question extends Model
         'title',
         'answers',
         'right_answer',
-        'score'
+        'score',
+        'quiz_id'
     ];
 
     public function quiz()
